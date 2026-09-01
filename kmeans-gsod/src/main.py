@@ -51,6 +51,20 @@ def parse_arguments(argv=None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
+def display_path(path) -> str:
+    """
+    Render a path relative to the project root for logging.
+
+    Absolute paths in logs leak the machine's directory layout and username, and
+    the log is committed to the repository. A relative path is also simply easier
+    to read. Falls back to the full path if it lies outside the project.
+    """
+    try:
+        return str(Path(path).resolve().relative_to(config.PROJECT_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def configure_logging(verbose: bool) -> None:
     logging.basicConfig(
         level=logging.DEBUG if verbose else logging.INFO,
@@ -211,7 +225,7 @@ def export_results(table, labels, profile, diagnostics, cluster_names, output_di
     )
     diagnostics.to_csv(output_dir / "k_diagnostics.csv")
 
-    logger.info("Wrote CSV results to %s", output_dir)
+    logger.info("Wrote CSV results to %s", display_path(output_dir))
 
 
 def main(argv=None) -> int:
@@ -243,7 +257,7 @@ def main(argv=None) -> int:
         visualise.plot_world_map(table, labels, cluster_names, args.output_dir)
         visualise.plot_cluster_profiles(profile, cluster_names, args.output_dir)
         visualise.plot_feature_space(table, labels, cluster_names, args.output_dir)
-        logger.info("Wrote 4 figures to %s", args.output_dir)
+        logger.info("Wrote 4 figures to %s", display_path(args.output_dir))
 
         export_results(table, labels, profile, diagnostics, cluster_names, args.output_dir)
 

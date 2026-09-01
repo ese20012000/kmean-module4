@@ -1,0 +1,160 @@
+test_a_single_cluster_has_no_boundaries (tests.test_clustering.TestBoundaryFragility.test_a_single_cluster_has_no_boundaries) ... ok
+test_a_straddling_point_is_flagged (tests.test_clustering.TestBoundaryFragility.test_a_straddling_point_is_flagged)
+Two tight groups with one station sitting exactly between them. The groups ... ok
+test_returns_a_share_between_zero_and_one (tests.test_clustering.TestBoundaryFragility.test_returns_a_share_between_zero_and_one) ... ok
+test_well_separated_clusters_are_not_fragile (tests.test_clustering.TestBoundaryFragility.test_well_separated_clusters_are_not_fragile) ... ok
+test_matches_the_group_means (tests.test_clustering.TestCentroidsInRealUnits.test_matches_the_group_means)
+A centroid is the mean of its members, so the two must agree. ... ok
+test_shape_and_columns (tests.test_clustering.TestCentroidsInRealUnits.test_shape_and_columns) ... ok
+test_values_land_inside_the_observed_range (tests.test_clustering.TestCentroidsInRealUnits.test_values_land_inside_the_observed_range)
+Inverse-transformed centroids must be physically plausible. ... ok
+test_a_flat_silhouette_does_not_drag_k_to_the_range_edge (tests.test_clustering.TestChooseK.test_a_flat_silhouette_does_not_drag_k_to_the_range_edge)
+The failure this rule exists to prevent. On the real data silhouette peaks ... ok
+test_delegates_to_the_elbow (tests.test_clustering.TestChooseK.test_delegates_to_the_elbow) ... ok
+test_empty_diagnostics_raises (tests.test_clustering.TestChooseK.test_empty_diagnostics_raises) ... ok
+test_empty_diagnostics_raises_for_silhouette_selection (tests.test_clustering.TestChooseK.test_empty_diagnostics_raises_for_silhouette_selection) ... ok
+test_recovers_the_true_group_count_on_known_data (tests.test_clustering.TestChooseK.test_recovers_the_true_group_count_on_known_data)
+The fixture holds three separated groups, so k should come out as 3. ... ok
+test_silhouette_only_selection_still_available (tests.test_clustering.TestChooseK.test_silhouette_only_selection_still_available) ... ok
+test_covers_the_configured_range (tests.test_clustering.TestEvaluateKRange.test_covers_the_configured_range) ... ok
+test_inertia_falls_monotonically_with_k (tests.test_clustering.TestEvaluateKRange.test_inertia_falls_monotonically_with_k)
+More clusters can only reduce within-cluster spread. ... ok
+test_reports_all_three_metrics (tests.test_clustering.TestEvaluateKRange.test_reports_all_three_metrics) ... ok
+test_silhouette_stays_within_bounds (tests.test_clustering.TestEvaluateKRange.test_silhouette_stays_within_bounds) ... ok
+test_too_few_samples_for_the_requested_k_raises (tests.test_clustering.TestEvaluateKRange.test_too_few_samples_for_the_requested_k_raises) ... ok
+test_a_straight_line_has_no_elbow (tests.test_clustering.TestFindElbow.test_a_straight_line_has_no_elbow)
+Constant returns per cluster means no k is preferred; take the smallest. ... ok
+test_empty_input_raises (tests.test_clustering.TestFindElbow.test_empty_input_raises) ... ok
+test_finds_a_sharp_elbow (tests.test_clustering.TestFindElbow.test_finds_a_sharp_elbow)
+Steep to k=4, then flat. The elbow is 4. ... ok
+test_finds_the_elbow_in_the_real_curve (tests.test_clustering.TestFindElbow.test_finds_the_elbow_in_the_real_curve) ... ok
+test_flat_curve_falls_back_to_the_smallest_k (tests.test_clustering.TestFindElbow.test_flat_curve_falls_back_to_the_smallest_k) ... ok
+test_is_independent_of_the_starting_k (tests.test_clustering.TestFindElbow.test_is_independent_of_the_starting_k) ... ok
+test_too_few_points_returns_the_smallest_k (tests.test_clustering.TestFindElbow.test_too_few_points_returns_the_smallest_k) ... ok
+test_is_reproducible_with_a_fixed_seed (tests.test_clustering.TestFitKMeans.test_is_reproducible_with_a_fixed_seed)
+K-Means converges to a local optimum set by its starting centroids. Without ... ok
+test_labels_one_per_station (tests.test_clustering.TestFitKMeans.test_labels_one_per_station) ... ok
+test_produces_exactly_k_clusters (tests.test_clustering.TestFitKMeans.test_produces_exactly_k_clusters) ... ok
+test_recovers_the_synthetic_groups (tests.test_clustering.TestFitKMeans.test_recovers_the_synthetic_groups) ... ok
+test_includes_withheld_geography_for_validation (tests.test_clustering.TestProfileClusters.test_includes_withheld_geography_for_validation) ... ok
+test_label_count_mismatch_is_caught (tests.test_clustering.TestProfileClusters.test_label_count_mismatch_is_caught) ... ok
+test_one_row_per_cluster (tests.test_clustering.TestProfileClusters.test_one_row_per_cluster) ... ok
+test_sorted_by_temperature_for_readable_reporting (tests.test_clustering.TestProfileClusters.test_sorted_by_temperature_for_readable_reporting) ... ok
+test_station_counts_add_up (tests.test_clustering.TestProfileClusters.test_station_counts_add_up) ... ok
+test_best_score_ranks_first (tests.test_clustering.TestRankDiagnostics.test_best_score_ranks_first) ... ok
+test_davies_bouldin_is_ranked_ascending_because_lower_is_better (tests.test_clustering.TestRankDiagnostics.test_davies_bouldin_is_ranked_ascending_because_lower_is_better) ... ok
+test_empty_input_raises (tests.test_clustering.TestRankDiagnostics.test_empty_input_raises) ... ok
+test_mean_rank_is_the_average_of_the_three (tests.test_clustering.TestRankDiagnostics.test_mean_rank_is_the_average_of_the_three) ... ok
+test_an_empty_cluster_yields_an_empty_list (tests.test_clustering.TestRepresentativeStations.test_an_empty_cluster_yields_an_empty_list) ... ok
+test_one_entry_per_cluster (tests.test_clustering.TestRepresentativeStations.test_one_entry_per_cluster) ... ok
+test_representatives_belong_to_their_own_cluster (tests.test_clustering.TestRepresentativeStations.test_representatives_belong_to_their_own_cluster)
+The bug this replaces: listing the first members in table order presented ... ok
+test_returns_the_requested_number (tests.test_clustering.TestRepresentativeStations.test_returns_the_requested_number) ... ok
+test_the_nearest_station_beats_an_arbitrary_member (tests.test_clustering.TestRepresentativeStations.test_the_nearest_station_beats_an_arbitrary_member) ... ok
+test_infinity_is_refused (tests.test_clustering.TestScaleFeatures.test_infinity_is_refused) ... ok
+test_missing_column_is_reported_clearly (tests.test_clustering.TestScaleFeatures.test_missing_column_is_reported_clearly) ... ok
+test_nan_is_refused_rather_than_propagated (tests.test_clustering.TestScaleFeatures.test_nan_is_refused_rather_than_propagated) ... ok
+test_output_is_standardized (tests.test_clustering.TestScaleFeatures.test_output_is_standardized) ... ok
+test_scaling_matters_because_the_raw_units_are_incomparable (tests.test_clustering.TestScaleFeatures.test_scaling_matters_because_the_raw_units_are_incomparable)
+Temperature spans tens of degrees while the day-fraction features sit ... ok
+test_shape_matches_the_feature_configuration (tests.test_clustering.TestScaleFeatures.test_shape_matches_the_feature_configuration) ... ok
+test_clusters_track_latitude_they_never_saw (tests.test_clustering.TestVarianceExplained.test_clusters_track_latitude_they_never_saw)
+The headline validation. Coordinates are not features, so a high score ... ok
+test_constant_column_returns_nan (tests.test_clustering.TestVarianceExplained.test_constant_column_returns_nan) ... ok
+test_nan_values_are_ignored (tests.test_clustering.TestVarianceExplained.test_nan_values_are_ignored) ... ok
+test_no_relationship_gives_about_zero (tests.test_clustering.TestVarianceExplained.test_no_relationship_gives_about_zero) ... ok
+test_perfect_separation_gives_one (tests.test_clustering.TestVarianceExplained.test_perfect_separation_gives_one) ... ok
+test_a_station_that_never_reports_rain_has_no_precipitation_data (tests.test_data_loader.TestCleanObservations.test_a_station_that_never_reports_rain_has_no_precipitation_data) ... ok
+test_absent_frshtt_column_is_tolerated (tests.test_data_loader.TestCleanObservations.test_absent_frshtt_column_is_tolerated) ... ok
+test_absent_prcp_attributes_column_is_tolerated (tests.test_data_loader.TestCleanObservations.test_absent_prcp_attributes_column_is_tolerated) ... ok
+test_all_six_flags_are_created (tests.test_data_loader.TestCleanObservations.test_all_six_flags_are_created) ... ok
+test_diurnal_range_survives_conversion (tests.test_data_loader.TestCleanObservations.test_diurnal_range_survives_conversion)
+An 18 F spread is 10 C; a common slip is to convert the range as if ... ok
+test_frshtt_expands_to_the_right_flags (tests.test_data_loader.TestCleanObservations.test_frshtt_expands_to_the_right_flags) ... ok
+test_genuine_zero_precipitation_is_kept (tests.test_data_loader.TestCleanObservations.test_genuine_zero_precipitation_is_kept)
+A real dry day, flag G, is data and must survive. ... ok
+test_input_frame_is_not_mutated (tests.test_data_loader.TestCleanObservations.test_input_frame_is_not_mutated) ... ok
+test_month_column_is_added (tests.test_data_loader.TestCleanObservations.test_month_column_is_added) ... ok
+test_precipitation_sentinel_becomes_nan (tests.test_data_loader.TestCleanObservations.test_precipitation_sentinel_becomes_nan) ... ok
+test_routinely_missing_columns_are_all_nan (tests.test_data_loader.TestCleanObservations.test_routinely_missing_columns_are_all_nan)
+GUST and SNDP are 999.9 in the fixture, as they usually are for real. ... ok
+test_sentinels_do_not_poison_the_mean (tests.test_data_loader.TestCleanObservations.test_sentinels_do_not_poison_the_mean)
+The regression test for the whole project. A station at a constant 50 F ... ok
+test_temperature_sentinels_become_nan (tests.test_data_loader.TestCleanObservations.test_temperature_sentinels_become_nan) ... ok
+test_trace_amount_flag_h_is_kept (tests.test_data_loader.TestCleanObservations.test_trace_amount_flag_h_is_kept)
+Flag H means the station observed precipitation but logged zero. Real. ... ok
+test_units_are_converted (tests.test_data_loader.TestCleanObservations.test_units_are_converted) ... ok
+test_unparseable_dates_are_dropped (tests.test_data_loader.TestCleanObservations.test_unparseable_dates_are_dropped) ... ok
+test_unreported_precipitation_is_missing_not_zero (tests.test_data_loader.TestCleanObservations.test_unreported_precipitation_is_missing_not_zero)
+The second regression test for the project. GSOD writes 0.00 with flag "I" ... ok
+test_empty_year_raises (tests.test_data_loader.TestListStationObjects.test_empty_year_raises) ... ok
+test_ignores_non_csv_keys (tests.test_data_loader.TestListStationObjects.test_ignores_non_csv_keys) ... ok
+test_walks_every_page (tests.test_data_loader.TestListStationObjects.test_walks_every_page) ... ok
+test_can_list_and_download_a_station (tests.test_data_loader.TestLiveS3Access.test_can_list_and_download_a_station) ... skipped 'set RUN_NETWORK_TESTS=1 to test live S3 access'
+test_frshtt_keeps_its_leading_zeros (tests.test_data_loader.TestReadStationCsv.test_frshtt_keeps_its_leading_zeros)
+Read as a number, "011000" becomes 11000 and every flag shifts. ... ok
+test_missing_file_raises (tests.test_data_loader.TestReadStationCsv.test_missing_file_raises) ... ok
+test_non_gsod_file_is_rejected_clearly (tests.test_data_loader.TestReadStationCsv.test_non_gsod_file_is_rejected_clearly) ... ok
+test_reads_a_well_formed_file (tests.test_data_loader.TestReadStationCsv.test_reads_a_well_formed_file) ... ok
+test_covers_every_wmo_block (tests.test_data_loader.TestSelectGlobalSample.test_covers_every_wmo_block) ... ok
+test_empty_catalogue_is_rejected (tests.test_data_loader.TestSelectGlobalSample.test_empty_catalogue_is_rejected) ... ok
+test_honours_max_stations (tests.test_data_loader.TestSelectGlobalSample.test_honours_max_stations) ... ok
+test_is_deterministic (tests.test_data_loader.TestSelectGlobalSample.test_is_deterministic) ... ok
+test_prefers_largest_files_as_a_completeness_proxy (tests.test_data_loader.TestSelectGlobalSample.test_prefers_largest_files_as_a_completeness_proxy) ... ok
+test_respects_stations_per_block (tests.test_data_loader.TestSelectGlobalSample.test_respects_stations_per_block) ... ok
+test_boiling_point (tests.test_data_loader.TestUnitConversions.test_boiling_point) ... ok
+test_conversions_preserve_nan (tests.test_data_loader.TestUnitConversions.test_conversions_preserve_nan) ... ok
+test_freezing_point (tests.test_data_loader.TestUnitConversions.test_freezing_point) ... ok
+test_inches_to_mm (tests.test_data_loader.TestUnitConversions.test_inches_to_mm) ... ok
+test_knots_to_ms (tests.test_data_loader.TestUnitConversions.test_knots_to_ms) ... ok
+test_negative_forty_is_the_same_in_both_scales (tests.test_data_loader.TestUnitConversions.test_negative_forty_is_the_same_in_both_scales) ... ok
+test_all_stations_rejected_raises (tests.test_features.TestBuildFeatureTable.test_all_stations_rejected_raises) ... ok
+test_good_stations_are_kept_and_bad_ones_dropped (tests.test_features.TestBuildFeatureTable.test_good_stations_are_kept_and_bad_ones_dropped) ... ok
+test_indexed_by_station_id (tests.test_features.TestBuildFeatureTable.test_indexed_by_station_id) ... ok
+test_no_missing_values_reach_the_model (tests.test_features.TestBuildFeatureTable.test_no_missing_values_reach_the_model) ... ok
+test_absolute_latitude_folds_the_southern_hemisphere (tests.test_features.TestBuildStationFeatures.test_absolute_latitude_folds_the_southern_hemisphere) ... ok
+test_annualisation_compensates_for_missing_days (tests.test_features.TestBuildStationFeatures.test_annualisation_compensates_for_missing_days)
+A station missing 30 precipitation days should not be reported as drier ... ok
+test_carries_identity_and_geography (tests.test_features.TestBuildStationFeatures.test_carries_identity_and_geography) ... ok
+test_constant_temperature_means_zero_seasonality (tests.test_features.TestBuildStationFeatures.test_constant_temperature_means_zero_seasonality) ... ok
+test_dewpoint_depression_measures_dryness (tests.test_features.TestBuildStationFeatures.test_dewpoint_depression_measures_dryness) ... ok
+test_flag_fractions_come_from_frshtt (tests.test_features.TestBuildStationFeatures.test_flag_fractions_come_from_frshtt) ... ok
+test_log_transform_compresses_the_rainfall_tail (tests.test_features.TestBuildStationFeatures.test_log_transform_compresses_the_rainfall_tail)
+A monsoon station receives roughly 12 times the rainfall of a dry one but ... ok
+test_mean_temperature_is_correct (tests.test_features.TestBuildStationFeatures.test_mean_temperature_is_correct) ... ok
+test_precipitation_is_annualised (tests.test_features.TestBuildStationFeatures.test_precipitation_is_annualised)
+0.1 inch every day for a full year is 2.54 mm x 365. ... ok
+test_precipitation_log_matches_the_total (tests.test_features.TestBuildStationFeatures.test_precipitation_log_matches_the_total) ... ok
+test_produces_every_configured_feature (tests.test_features.TestBuildStationFeatures.test_produces_every_configured_feature) ... ok
+test_seasonality_is_warmest_minus_coldest_month (tests.test_features.TestBuildStationFeatures.test_seasonality_is_warmest_minus_coldest_month)
+Exactly 0 C for six months then exactly 20 C: seasonality is 20. ... ok
+test_seasonality_rises_with_the_annual_swing (tests.test_features.TestBuildStationFeatures.test_seasonality_rises_with_the_annual_swing) ... ok
+test_unreported_rain_does_not_fabricate_a_desert (tests.test_features.TestBuildStationFeatures.test_unreported_rain_does_not_fabricate_a_desert)
+Same station, same actual rainfall, but half the year carries GSOD's "no ... ok
+test_wet_day_fraction_uses_the_one_millimetre_threshold (tests.test_features.TestBuildStationFeatures.test_wet_day_fraction_uses_the_one_millimetre_threshold) ... ok
+test_dry_but_humid_air_is_mediterranean (tests.test_features.TestDescribeCluster.test_dry_but_humid_air_is_mediterranean)
+Coastal deserts: little rain, but the air is not dry. Santiago, Tacna. ... ok
+test_dry_is_arid (tests.test_features.TestDescribeCluster.test_dry_is_arid) ... ok
+test_every_label_is_a_non_empty_string (tests.test_features.TestDescribeCluster.test_every_label_is_a_non_empty_string) ... ok
+test_hot_and_wet_is_tropical (tests.test_features.TestDescribeCluster.test_hot_and_wet_is_tropical) ... ok
+test_mild_default_is_maritime (tests.test_features.TestDescribeCluster.test_mild_default_is_maritime) ... ok
+test_seasonal_desert_is_arid_not_continental (tests.test_features.TestDescribeCluster.test_seasonal_desert_is_arid_not_continental)
+The regression test for a real mislabelling. The New Mexico and Iranian ... ok
+test_snowy_and_seasonal_is_cold_continental (tests.test_features.TestDescribeCluster.test_snowy_and_seasonal_is_cold_continental) ... ok
+test_subfreezing_and_mildly_seasonal_is_tundra (tests.test_features.TestDescribeCluster.test_subfreezing_and_mildly_seasonal_is_tundra) ... ok
+test_subfreezing_and_wildly_seasonal_is_subarctic_continental (tests.test_features.TestDescribeCluster.test_subfreezing_and_wildly_seasonal_is_subarctic_continental)
+Regression test. Antarctic coastal stations and Fairbanks both average ... ok
+test_the_five_observed_clusters_all_get_distinct_labels (tests.test_features.TestDescribeCluster.test_the_five_observed_clusters_all_get_distinct_labels)
+The labels have to actually discriminate on the real cluster profiles. ... ok
+test_empty_station_is_rejected (tests.test_features.TestQualityGates.test_empty_station_is_rejected) ... ok
+test_partial_year_is_rejected (tests.test_features.TestQualityGates.test_partial_year_is_rejected)
+A station that stopped reporting in August cannot describe a climate. ... ok
+test_sparse_months_are_ignored_when_ranking (tests.test_features.TestQualityGates.test_sparse_months_are_ignored_when_ranking)
+A month represented by only two freak-cold days must not be allowed to ... ok
+test_too_few_precipitation_days_is_rejected (tests.test_features.TestQualityGates.test_too_few_precipitation_days_is_rejected) ... ok
+test_too_few_temperature_days_is_rejected (tests.test_features.TestQualityGates.test_too_few_temperature_days_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 125 tests in 20.578s
+
+OK (skipped=1)

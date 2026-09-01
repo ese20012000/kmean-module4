@@ -38,16 +38,32 @@ Thiruvananthapuram, Manila and Colombo in tropical humid.
 
 ## Running it
 
+**Python 3.9 or newer is required; 3.12+ recommended.** Check with
+`python --version` before anything else.
+
 ```bash
 python -m venv .venv
-.venv\Scripts\activate            # Windows
+.venv\Scripts\activate                  # Windows
+source .venv/bin/activate               # macOS / Linux
+
+python -m pip install --upgrade pip     # do not skip this
 pip install -r requirements.txt
 
-python -m src.main                # full run: downloads, clusters, plots
+python -m src.main                      # full run: downloads, clusters, plots
 ```
 
-No AWS account, credentials or charges. The bucket is public and requests are
-unsigned.
+Upgrading pip is not optional housekeeping. An old pip silently discards every
+package version that needs a newer interpreter than yours, then reports
+`ERROR: No matching distribution found for boto3`, which points at the package
+when the real problem is your Python version. If you see that, run
+`python --version` first.
+
+`requirements.txt` specifies minimum versions so it resolves across
+interpreters. `requirements-lock.txt` holds the exact versions this was tested
+against and needs Python 3.11+.
+
+No AWS account, credentials or charges are needed to run the application itself.
+The NOAA bucket is public and requests are unsigned.
 
 | Option | Effect |
 |---|---|

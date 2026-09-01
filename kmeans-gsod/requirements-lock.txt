@@ -1,0 +1,24 @@
+﻿# Exact versions the application was developed and tested against, captured with
+# `pip freeze`. Use this file for a byte-identical environment on Python 3.11+.
+#
+#     pip install -r requirements-lock.txt
+#
+# On Python 3.10 or older these pins will fail. Every version here requires a
+# newer interpreter, and pip reports the confusing "no matching distribution
+# found" rather than saying so plainly. Use requirements.txt instead, which
+# specifies minimum versions and resolves on Python 3.9 upward.
+#
+# Verified on Python 3.13.2, Windows 11.
+
+boto3==1.43.84
+matplotlib==3.11.1
+numpy==2.5.2
+pandas==3.0.5
+scikit-learn==1.9.0
+
+# Resolved transitively.
+botocore==1.43.84
+joblib==1.6.0
+python-dateutil==2.9.0.post0
+s3transfer==0.19.2
+scipy==1.18.1

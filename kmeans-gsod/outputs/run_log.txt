@@ -1,0 +1,145 @@
+INFO     gsod_kmeans: Offline mode: using 531 cached station files
+INFO     src.features: Feature table: 273 stations kept, 255 rejected on quality, 3 dropped for NaN
+INFO     gsod_kmeans: Feature table ready: 273 stations x 10 features
+INFO     src.clustering: Fitted k=5, inertia=1248.53, silhouette=0.2646
+
+==============================================================================
+K-SELECTION DIAGNOSTICS
+==============================================================================
+      inertia  silhouette  calinski_harabasz  davies_bouldin  silhouette_rank  calinski_rank  davies_bouldin_rank  mean_rank
+k                                                                                                                           
+2   2125.6337      0.2172            77.0515          1.6924              9.0            4.0                  9.0     7.3333
+3   1697.6660      0.2471            82.0922          1.3333              5.0            1.0                  8.0     4.6667
+4   1445.3475      0.2606            79.6975          1.2126              2.0            2.0                  5.0     3.0000
+5   1248.5311      0.2646            79.5002          1.1954              1.0            3.0                  4.0     2.6667
+6   1121.6214      0.2495            76.5743          1.2542              3.0            5.0                  6.0     4.6667
+7   1019.9744      0.2415            74.3265          1.2567              7.0            6.0                  7.0     6.6667
+8    933.0658      0.2477            72.9068          1.1862              4.0            7.0                  3.0     4.6667
+9    867.8629      0.2391            70.8067          1.1763              8.0            8.0                  2.0     6.0000
+10   818.1898      0.2470            68.2816          1.1748              6.0            9.0                  1.0     5.3333
+
+  Silhouette range across all k : 0.0473  (0.217 to 0.265)
+  Elbow of the inertia curve    : k = 5   <- used
+  Best silhouette alone         : k = 5
+  Best mean rank of all three   : k = 5
+  Fitted                        : k = 5
+
+  The silhouette curve is nearly flat, which is the expected result for
+  climate: it is a continuum, not a set of separated blobs. The maximum
+  of a flat curve is noise, so k comes from the elbow of the inertia
+  curve instead, which is the criterion that rewards parsimony.
+
+==============================================================================
+CLUSTER PROFILES
+==============================================================================
+
+Cluster 0 -- Polar / tundra  (23 stations)
+  mean temperature         -1.0 deg C
+  seasonality              20.4 deg C
+  diurnal range             5.7 deg C
+  dew point depression      2.6 deg C
+  annual precipitation      621 mm
+  wet days                28.3%
+  snow days               34.0%
+  thunder days             0.6%
+  -- withheld from model --
+  mean |latitude|          60.5 deg
+  mean elevation            248 m
+  most typical stations (nearest the centroid):
+    - Im. M.V. Popova, Rs
+    - Base Bernardo O Higgins, Ay
+    - Mys Sterlegova, Rs
+    - Gmo Im.E.K. Fedorova, Rs
+
+Cluster 1 -- Subarctic continental  (81 stations)
+  mean temperature         -0.5 deg C
+  seasonality              39.7 deg C
+  diurnal range            11.0 deg C
+  dew point depression      5.3 deg C
+  annual precipitation      570 mm
+  wet days                25.1%
+  snow days               25.8%
+  thunder days             2.5%
+  -- withheld from model --
+  mean |latitude|          56.9 deg
+  mean elevation            379 m
+  most typical stations (nearest the centroid):
+    - Novyj Vasyugan, Rs
+    - Fairbanks Wainwright Army Air Field Airport, Ak Us
+    - Bol Shoj Shantar, Rs
+    - Ust Barguzin, Rs
+
+Cluster 2 -- Arid / semi-arid  (31 stations)
+  mean temperature         12.4 deg C
+  seasonality              26.9 deg C
+  diurnal range            14.8 deg C
+  dew point depression     14.0 deg C
+  annual precipitation      211 mm
+  wet days                 8.2%
+  snow days                2.7%
+  thunder days             1.4%
+  -- withheld from model --
+  mean |latitude|          35.6 deg
+  mean elevation           1408 m
+  most typical stations (nearest the centroid):
+    - Zhongning, Ch
+    - Yinchuan, Ch
+    - Zhangye, Ch
+    - Jiuquan Suzhou, Ch
+
+Cluster 4 -- Maritime temperate  (114 stations)
+  mean temperature         16.5 deg C
+  seasonality              15.9 deg C
+  diurnal range             9.7 deg C
+  dew point depression      5.6 deg C
+  annual precipitation     1011 mm
+  wet days                27.0%
+  snow days                2.5%
+  thunder days             5.8%
+  -- withheld from model --
+  mean |latitude|          36.2 deg
+  mean elevation            261 m
+  most typical stations (nearest the centroid):
+    - Novi Sad Rimski Sancevi, Ri
+    - Jiangbei, Ch
+    - Xiaoshan, Ch
+    - Longdongbao, Ch
+
+Cluster 3 -- Tropical humid  (24 stations)
+  mean temperature         27.1 deg C
+  seasonality               3.6 deg C
+  diurnal range             7.2 deg C
+  dew point depression      3.9 deg C
+  annual precipitation     2802 mm
+  wet days                51.5%
+  snow days                0.1%
+  thunder days            23.2%
+  -- withheld from model --
+  mean |latitude|          11.4 deg
+  mean elevation             76 m
+  most typical stations (nearest the centroid):
+    - Thiruvananthapuram International, In
+    - Ninoy Aquino International, Rp
+    - Clark International, Rp
+    - Bandaranaike International Colombo, Ce
+
+==============================================================================
+VALIDATION AGAINST WITHHELD GEOGRAPHY
+==============================================================================
+  Cluster membership explains  63.8% of the variance in absolute latitude
+  Cluster membership explains  20.7% of the variance in elevation
+
+  Neither latitude nor elevation was part of the feature set, so any
+  agreement is inferred from weather behaviour alone.
+
+==============================================================================
+HOW FIRM ARE THE BOUNDARIES?
+==============================================================================
+  4.0% of stations sit almost as close to a neighbouring cluster
+  as to their own. Climate is continuous, so a hard partition has to cut
+  somewhere; these are the stations where the assignment is a close call
+  and would move under a different random seed or a slightly wider sample.
+INFO     gsod_kmeans: Wrote 4 figures to outputs
+INFO     gsod_kmeans: Wrote CSV results to outputs
+
+Done.
