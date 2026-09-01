@@ -1,0 +1,30 @@
+# Virtual environment
+.venv/
+venv/
+
+# Cached NOAA station downloads. Excluded deliberately: the data is public and
+# the application re-fetches it on demand, so committing ~25 MB of CSV would add
+# nothing but weight to the repository.
+data/
+
+# Generated figures and result tables. Reproduced by `python -m src.main`.
+# Committing outputs/ instead is also reasonable if the marker wants to see the
+# figures without running the code -- see README.
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+.EXECUTIVE_SUMMARY.md
