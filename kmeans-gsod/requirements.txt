@@ -1,22 +1,21 @@
-# Pinned to the exact versions the graded run was executed and tested against,
-# captured with `pip freeze` rather than written by hand.
+﻿# Minimum versions rather than exact pins, so this resolves across interpreter
+# versions. Python 3.9 or newer is required; 3.12+ is recommended.
 #
-#   python -m venv .venv
-#   .venv\Scripts\activate          (Windows)
-#   source .venv/bin/activate       (macOS / Linux)
-#   pip install -r requirements.txt
+#     python -m venv .venv
+#     .venv\Scripts\activate           (Windows)
+#     source .venv/bin/activate        (macOS / Linux)
+#     python -m pip install --upgrade pip
+#     pip install -r requirements.txt
 #
-# Verified on Python 3.13.2, Windows 11.
+# Upgrade pip first. Versions older than about 21.3 resolve dependencies poorly
+# and report "no matching distribution found" when the real problem is that your
+# Python is too old for the package.
+#
+# See requirements-lock.txt for the exact versions this was tested against, if
+# you are on Python 3.11+ and want a byte-identical environment.
 
-boto3==1.43.84
-matplotlib==3.11.1
-numpy==2.5.2
-pandas==3.0.5
-scikit-learn==1.9.0
-
-# Resolved transitively, pinned so the environment is fully reproducible.
-botocore==1.43.84
-joblib==1.6.0
-python-dateutil==2.9.0.post0
-s3transfer==0.19.2
-scipy==1.18.1
+boto3>=1.34
+matplotlib>=3.7
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
