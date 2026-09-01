@@ -205,26 +205,23 @@ reduced space for comparison against these results.
 
 ## Citations
 
-NOAA National Centers for Environmental Information. (2024). *Global Surface
-Summary of the Day (GSOD)*. Registry of Open Data on AWS.
-https://registry.opendata.aws/noaa-gsod/ (accessed 31 August 2026).
-Data accessed at `s3://noaa-gsod-pds/2023/`.
+[1] Amazon Web Services. (n.d.). Boto3: The AWS SDK for Python (Version 1.43.84) [Computer software]. https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
 
-NOAA data disseminated through the NOAA Open Data Dissemination programme are
-open to the public with no restrictions on use. NOAA requests attribution and
-does not endorse or affiliate with this work. The data here is unmodified NOAA
-data subjected to the cleaning and aggregation described above.
+[2] Arthur, D., & Vassilvitskii, S. (2007). k-means++: The advantages of careful seeding. In Proceedings of the Eighteenth Annual ACM-SIAM Symposium on Discrete Algorithms (pp. 1027-1035). Society for Industrial and Applied Mathematics.
 
-Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O.,
-Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos,
-A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, É. (2011).
-Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*,
-12, 2825–2830.
+[3]Calinski, T., & Harabasz, J. (1974). A dendrite method for cluster analysis. Communications in Statistics, 3(1), 1-27.
 
-Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to the interpretation and
-validation of cluster analysis. *Journal of Computational and Applied
-Mathematics*, 20, 53–65.
+[4] Davies, D. L., & Bouldin, D. W. (1979). A cluster separation measure. IEEE Transactions on Pattern Analysis and Machine Intelligence, PAMI-1(2), 224-227.
 
-Satopää, V., Albrecht, J., Irwin, D., & Raghavan, B. (2011). Finding a "kneedle"
-in a haystack: Detecting knee points in system behavior. *31st International
-Conference on Distributed Computing Systems Workshops*, 166–171.
+[5] Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in Science & Engineering, 9(3), 90-95.
+[6] McKinney, W. (2010). Data structures for statistical computing in Python. In Proceedings of the 9th Python in Science Conference (pp. 56-61).
+
+[7] NOAA National Centers for Environmental Information. (n.d.). Global surface summary of the day (GSOD) [Data set]. Registry of Open Data on AWS. Retrieved August 31, 2026, from https://registry.opendata.aws/noaa-gsod/
+
+[8] NumPy Developers. (n.d.). NumPy (Version 2.5.2) [Computer software]. https://numpy.org/
+[9] Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, E. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825-2830.
+
+[10] Python Software Foundation. (n.d.). Python (Version 3.13.2) [Computer software]. https://www.python.org/
+[11] Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to the interpretation and validation of cluster analysis. Journal of Computational and Applied Mathematics, 20, 53-65.
+
+[12] Satopaa, V., Albrecht, J., Irwin, D., & Raghavan, B. (2011). Finding a "kneedle" in a haystack: Detecting knee points in system behavior. In 2011 31st International Conference on Distributed Computing Systems Workshops (pp. 166-171). IEEE.
